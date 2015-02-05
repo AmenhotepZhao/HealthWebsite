@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BMI & BMR calculator</title>
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+<link href="../../styles/header.css" rel="stylesheet">
+
+<script type="text/javascript" src="./BMI_BMR_calculator.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./BMI_BMR_calculator.css">
+
+</head>
+
+<body>
+
+<h3>Please provide the following information:</h3>
+
+
+<table>
+  
+<tr>
+<td class="infoText"> Weight: <input class="inputNumber" id="weight" name="weight"
+  type="number" max="320" min="1"> lb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td class="infoText"> Height: <input class="inputNumber" id="heightFt"
+  name="heightFt" type="number" max="8" min="0"> ft &nbsp;&nbsp;
+</td>
+<td>
+  <input class="inputNumber" id="heightInch" name="heightIn"
+  type="number" max="11" min="0"> in </td>
+</tr>
+
+<tr>
+<td> <p class="warning" id="weightWarning"> </p> </td>
+<td> <p class="warning" id="heightFtWarning">  </p> </td>
+<td> <p class="warning" id="heightInWarning">  </p> </td>
+</tr>
+
+<tr>
+<td class="infoText"> Age: &nbsp;&nbsp;&nbsp;&nbsp; <input
+  class="inputNumber" id="age" name="age" type="number" max="120" min="0">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td colspan="2" class="infoText">
+ <form>
+<input type="radio" name="sex" id="male" checked>Male  &nbsp;
+<input type="radio" name="sex" id="female">Female
+</form>
+</td>
+</tr>
+
+<tr>
+<td> <p class="warning" id="ageWarning">  </p> </td>
+<td> </td>
+<td> </td>
+</tr>
+
+</table>
+
+<table>
+<tr>
+<td colspan="4">
+<input type="submit" class="button" id="submitButton"
+  value="Calculate" onclick="calculator.readInput(); calculator.showBMI(); calculator.showBMR();">
+</td>
+</tr>
+<tr>
+<td> BMI: </td>
+<td> <div class="output" id="bmi"></div> </td>
+<td> BMR: </td>
+<td><div class="output" id="bmr"></div> </td>
+</tr>
+</table>
+
+<p id="explanation"></p>
+
+<!-- calculator.readInput(); calculator.showBMI(); calculator.showBMR(); -->
+
+</body>
+</html>
