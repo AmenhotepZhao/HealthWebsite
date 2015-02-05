@@ -20,32 +20,36 @@
 
 <body>
 
-<h3>Please provide the following information:</h3>
-
+<h4>Please provide the following information:</h4>
 
 <table>
   
 <tr>
-<td class="infoText"> Weight: <input class="inputNumber" id="weight" name="weight"
-  type="number" max="320" min="1"> lb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-<td class="infoText"> Height: <input class="inputNumber" id="heightFt"
-  name="heightFt" type="number" max="8" min="0"> ft &nbsp;&nbsp;
+<td>Weight: </td>
+<td><input class="inputNumber" id="weight" name="weight"
+  type="number" max="320" min="1"> lb <span class="error" id="weighterror"> </span>
 </td>
-<td>
+</tr>
+
+<tr>
+<td> Height: </td>
+<td><input class="inputNumber" id="heightFt"
+  name="heightFt" type="number" max="8" min="0"> ft &nbsp;&nbsp;  <span class="error" id="heightFterror"> </span>
   <input class="inputNumber" id="heightInch" name="heightIn"
-  type="number" max="11" min="0"> in </td>
+  type="number" max="11" min="0"> in <span class="error" id="heightInerror"> </span>
+</td>
 </tr>
 
 <tr>
-<td> <p class="warning" id="weightWarning"> </p> </td>
-<td> <p class="warning" id="heightFtWarning">  </p> </td>
-<td> <p class="warning" id="heightInWarning">  </p> </td>
+ <td>Age:</td>
+ <td> <input
+  class="inputNumber" id="age" name="age" type="number" max="120"
+  min="0"> <span class="error" id="ageerror"> </span>
+</td>
 </tr>
 
 <tr>
-<td class="infoText"> Age: &nbsp;&nbsp;&nbsp;&nbsp; <input
-  class="inputNumber" id="age" name="age" type="number" max="120" min="0">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-<td colspan="2" class="infoText">
+<td colspan="2">
  <form>
 <input type="radio" name="sex" id="male" checked>Male  &nbsp;
 <input type="radio" name="sex" id="female">Female
@@ -53,32 +57,23 @@
 </td>
 </tr>
 
-<tr>
-<td> <p class="warning" id="ageWarning">  </p> </td>
-<td> </td>
-<td> </td>
-</tr>
-
 </table>
 
-<table>
-<tr>
-<td colspan="4">
 <input type="submit" class="button" id="submitButton"
-  value="Calculate" onclick="calculator.readInput(); calculator.showBMI(); calculator.showBMR();">
-</td>
+  value="Calculate" onclick="calculator.readInput();
+  calculator.showBMI(); calculator.showBMR();"> <br>
+
+<table>
+ <tr> 
+<td> BMI: </td> <td> <span class="output" id="bmi"></span>
 </tr>
 <tr>
-<td> BMI: </td>
-<td> <div class="output" id="bmi"></div> </td>
-<td> BMR: </td>
-<td><div class="output" id="bmr"></div> </td>
+<td> BMR: </td> <td><span class="output" id="bmr"></span> 
+</td>
 </tr>
 </table>
 
 <p id="explanation"></p>
-
-<!-- calculator.readInput(); calculator.showBMI(); calculator.showBMR(); -->
 
 </body>
 </html>

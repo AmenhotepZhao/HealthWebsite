@@ -11,11 +11,11 @@
             var input = parseFloat(node.value);
             if (isNaN(input) || input >
             parseInt(node.getAttribute("max")) || input < parseInt(node.getAttribute("min"))) {
-                document.getElementById(node.getAttribute("name")+"Warning").innerHTML="Please check you input"; 
-                return -1;
+                  document.getElementById(node.getAttribute("name")+"error").innerHTML = "Please check the input."
+                  return -1;
             }
             else {
-                 document.getElementById(node.getAttribute("name")+"Warning").innerHTML=""; 
+		  document.getElementById(node.getAttribute("name")+"error").innerHTML = ""
                   return input;
             }
        },
@@ -54,7 +54,7 @@
 
         showBMR : function() {
              var bmr = this.calculateBMR()
-            if (bmr >= 0) document.getElementById("bmr").innerHTML =  bmr.toFixed(2)  + "kcal"
+            if (bmr >= 0) document.getElementById("bmr").innerHTML =  bmr.toFixed(2)  + " kcal"
             else  document.getElementById("bmr").innerHTML = "(-_-\")"
         }
     }
